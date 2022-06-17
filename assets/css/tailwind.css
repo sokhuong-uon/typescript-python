@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @layer components {
+  .table-row {
+    @apply w-16 text-center;
+  }
+} */
+@layer components {
+	.table-cel {
+		@apply w-16 h-12 text-center;
+	}
+	.table-cel-bold {
+		@apply w-16 h-12 text-center font-bold;
+	}
+}
