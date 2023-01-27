@@ -8,8 +8,6 @@ type JSON_OBJECT = {
 
 const transportationProblemSolver = ( req: express.Request, res: express.Response ) => {
 
-	console.log(`Request from: \x1b[32m${req.ip}`)
-
 	if ( !req.files ) return res.send( 'No file uploaded!' )
 
 	const service = new PythonService
@@ -22,13 +20,8 @@ const transportationProblemSolver = ( req: express.Request, res: express.Respons
 	let matrix: number[][]
 
 	try {
-
 		matrix = JSON.parse( matrixDataFile.data.toString() )
-		// console.log( matrix )
-
 	} catch( err ) {
-
-		console.log(err.message)
 		return res.send( 'Error parsing form data!' )
 	}
 
